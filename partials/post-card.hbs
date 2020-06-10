@@ -22,7 +22,15 @@
 
             <header class="post-card-header">
                 <div class="post-card-header-tags">
-                    <span class="post-visibility post-visibility-{{visibility}}">Free Post</span>
+                    {{#has visibility="paid"}}
+                        <span class="post-visibility post-visibility-{{visibility}}">Premium</span>
+                    {{else has visibility="public"}}
+                        <span class="post-visibility post-visibility-{{visibility}}">Free</span>
+                    {{!-- {{else has visibility="member"}} --}}
+                    {{!-- visibility is currently not working when it equals "member, so did this work around with the else" --}}
+                    {{else}}
+                        <span class="post-visibility post-visibility-{{visibility}}">Member Only</span>
+                    {{/has}}
                     {{#if primary_tag}}
                         {{#primary_tag}}
                             <div class="post-card-primary-tag">{{name}}</div>

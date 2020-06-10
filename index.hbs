@@ -15,6 +15,23 @@ into the {body} of the default.hbs template --}}
                     {{/if}}
                 </h1>
                 <h2 class="site-description">{{@site.description}}</h2>
+                {{#unless @member}}
+                    {{!-- <a class="button primary large" href="{{@site.url}}/signup/">Subscribe</a> --}}
+
+                            {{!-- Not logged in: Sign up --}}
+                    <form class="signup-form" data-members-form="signup">
+                        <div class="signup-box">
+                            <input data-members-email type="email" placeholder="your email..." required="true" autocomplete="false" />
+                            <button class="button pop" type="submit">
+                                <span class="button-content">get access</span>
+                                <span class="button-loader">{{> "icons/loader"}}</span>
+                            </button>
+                        </div>
+                        <div class="message-success"><strong>Great!</strong> Check your inbox and click the link to confirm your subscription</div>
+                        <div class="message-error">Enter a valid email, fool</div>
+                    </form>
+
+                {{/unless}}
             </div>
         </div>
     </div>
