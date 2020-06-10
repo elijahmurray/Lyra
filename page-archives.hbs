@@ -7,12 +7,10 @@ into the {body} of the default.hbs template --}}
         <div class="inner">
             {{> "site-nav"}}
             <div class="site-archives-content">
-                <h1 class="site-title"> Archives </h1>
-                <h2 class="site-description">{{@site.description}}</h2>
+                <h1 class="site-title">Archives</h1>
+                <h2 class="site-description">Read until your heart's content</h2>
                 {{#unless @member}}
-                    {{!-- <a class="button primary large" href="{{@site.url}}/signup/">Subscribe</a> --}}
-
-                            {{!-- Not logged in: Sign up --}}
+                    {{!-- Not logged in: Sign up --}}
                     <form class="signup-form" data-members-form="signup">
                         <div class="signup-box">
                             <input data-members-email type="email" placeholder="your email..." required="true" autocomplete="false" />

@@ -27,16 +27,14 @@
 
         {{!-- The footer at the very bottom of the screen --}}
         <footer class="site-footer outer">
-            <div class="site-footer-content inner">
+            <div class="site-footer-content inner text-center">
                 <section class="copyright">
                     <a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
-                    <a href="{{@site.url}}">Home</a>
-                    <a href="{{@site.url}}/signup">Signup</a>
                     {{#if @site.secondary_navigation}}
                     {{navigation type="secondary"}}
                     {{/if}}
                     {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
-                    {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+                    {{!-- {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}} --}}
                 </section>
                 {{!-- <nav class="site-footer-nav">
                     Published with
@@ -152,3 +150,12 @@
 
 </body>
 </html>
+
+<div class="by-a">
+    <a href="https://twitter.com/elijahmurray" target="_blank">
+    <div class="author-avatar" style="float: left; margin-left: 3px">
+        <img class="author-profile-image" src="https://gravatar.com/avatar/e2c4ee577e92de928b58ad3b3180b1e7?s=200&d=robohash&r=x" alt="{{name}}" />
+    </div>
+        <span style="float: left; margin: 6px 0px 00px 10px;">@elijahmurray</span>
+    </a>
+</div>
