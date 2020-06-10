@@ -11,15 +11,17 @@
         {{!-- Logged in, paying member: Redirect home --}}
         <script>window.location = '{{@site.url}}';</script>
 
-    {{else if true}}
-    {{!-- {{else if @member}} --}}
+    {{!-- {{else if true}} --}}
+    {{else if @member}}
 
         {{!-- Logged in, not paying: Check out --}}
         <div class="checkout-form">
             <h1 class="checkout-title">Thanks for being a member!</h1>
-            <p>If {{@site.title}} has helped you enrichen your life, support me through a membership.</p>
-            <div class="checkout-box">
-                <div class="checkout-plan">
+            <p>You can expect your first newsletter delivered promptly to your inbox on Monday.</p>
+            {{!-- <p>If {{@site.title}} has helped you enrichen your life, tweet about it!</p> --}}
+            {{!-- <p>If {{@site.title}} has helped you enrichen your life, support me through a membership.</p> --}}
+             <div class="checkout-box">
+             {{!--   <div class="checkout-plan">
                     <header class="checkout-plan-header">
                         <h3>Monthly</h3>
                         <span>{{@price.currency_symbol}}</span><strong>{{@price.monthly}}</strong> / month
@@ -32,7 +34,7 @@
                         </ul>
                         <a class="button primary fit" href="javascript:" data-members-plan="Monthly">Select plan</a>
                     </div>
-                </div>
+                </div> --}}
                 {{!-- <div class="checkout-plan">
                     <header class="checkout-plan-header">
                         <h3>Yearly</h3>
