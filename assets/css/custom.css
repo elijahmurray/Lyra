@@ -46,3 +46,42 @@
     color: white;
     background-image: linear-gradient(to right, color(#e055c9 l(-10%)), color(#ff5135 l(-10%)));
 }
+
+/* Revert this change to have the annual pricing option back */
+.checkout-plan { flex: none!important; }
+
+
+/* 3. Special Template Styles
+/* ---------------------------------------------------------- */
+
+@media (min-width: 900px) {
+    .page-archives .post-feed,
+    .tag-template .post-feed,
+    .author-template .post-feed {
+        padding: 40px 0 5vw;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+    .page-archives .site-nav {
+        position: relative;
+    }
+}
+
+.page-archives .site-nav-main {
+    z-index: 100;
+}
+
+.page-archives .site-nav-main .site-nav {
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+
+.page-archives .site-nav-main .fixed-nav-active {
+    opacity: 1;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0.05s;
+}
+
+.page-archives .site-home-header .site-nav-logo {
+    display: block;
+}

@@ -11,12 +11,13 @@
         {{!-- Logged in, paying member: Redirect home --}}
         <script>window.location = '{{@site.url}}';</script>
 
-    {{else if @member}}
+    {{else if true}}
+    {{!-- {{else if @member}} --}}
 
         {{!-- Logged in, not paying: Check out --}}
         <div class="checkout-form">
-            <h1 class="checkout-title">Choose your subscription</h1>
-            <p>Unlock full access to {{@site.title}} and see the entire library of members-only content & updates</p>
+            <h1 class="checkout-title">Thanks for being a member!</h1>
+            <p>If {{@site.title}} has helped you enrichen your life, support me through a membership.</p>
             <div class="checkout-box">
                 <div class="checkout-plan">
                     <header class="checkout-plan-header">
@@ -25,30 +26,28 @@
                     </header>
                     <div class="checkout-plan-content">
                         <ul>
-                            <li>Full access to all private posts</li>
-                            <li>Regular updates with new content</li>
                             <li>Support independent publishing</li>
+                            <li>A warm fuzzy feeling</li>
                             <li>Simple, secure card payment</li>
                         </ul>
-                        <a class="button primary fit" href="javascript:" data-members-plan="Monthly">Choose this plan</a>
+                        <a class="button primary fit" href="javascript:" data-members-plan="Monthly">Select plan</a>
                     </div>
                 </div>
-                <div class="checkout-plan">
+                {{!-- <div class="checkout-plan">
                     <header class="checkout-plan-header">
                         <h3>Yearly</h3>
                         <span>{{@price.currency_symbol}}</span><strong>{{@price.yearly}}</strong> / year
                     </header>
                     <div class="checkout-plan-content">
                         <ul>
-                            <li>Full access to all private posts</li>
-                            <li>Regular updates with new content</li>
                             <li>Support independent publishing</li>
+                            <li>A warm fuzzy feeling</li>
                             <li>Simple, secure card payment</li>
                             <li>One easy payment instead of 12!</li>
                         </ul>
                         <a class="button primary fit" href="javascript:" data-members-plan="Yearly">Choose this plan</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
 
