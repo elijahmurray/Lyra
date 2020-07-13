@@ -24,17 +24,9 @@ into the {body} of the default.hbs template --}}
                     {{!-- <a class="button primary large" href="{{@site.url}}/signup/">Subscribe</a> --}}
 
                             {{!-- Not logged in: Sign up --}}
-                    <form class="signup-form" data-members-form="signup">
-                        <div class="signup-box">
-                            <input data-members-email type="email" placeholder="your email..." required="true" autocomplete="false" autofocus />
-                            <button class="button pop" type="submit">
-                                <span class="button-content">get the newsletter</span>
-                                <span class="button-loader">{{> "icons/loader"}}</span>
-                            </button>
-                        </div>
-                        <div class="message-success"><strong>Great!</strong> Check your inbox and click the link to confirm your subscription</div>
-                        <div class="message-error">Enter a valid email, fool</div>
-                    </form>
+                            {{> subscribe-form form_only='true'}}
+
+
                     <div style="z-index: 10000;"><a href="/10-year-rule">Let me read a sample</a></div>
 
                 {{/unless}}

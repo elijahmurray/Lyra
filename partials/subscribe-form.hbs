@@ -1,19 +1,36 @@
-<section class="subscribe-form">
-    <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
-    <p class="subscribe-form-description">Get the latest posts delivered right to your inbox</p>
-    <form data-members-form="subscribe">
-        <div class="form-group">
-            <input class="subscribe-email" data-members-email placeholder="youremail@example.com" autocomplete="false" />
-            <button class="button primary" type="submit">
-                <span class="button-content">Subscribe</span>
+{{#if form_only}}
+    <form class="signup-form" data-members-form="signup">
+        <div class="signup-box">
+            <input data-members-email type="email" placeholder="your email..." required="true" autocomplete="false"
+                autofocus />
+            <button class="button pop" type="submit">
+                <span class="button-content">get the newsletter</span>
                 <span class="button-loader">{{> "icons/loader"}}</span>
             </button>
         </div>
-        <div class="message-success">
-            <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
-        </div>
-        <div class="message-error">
-            Please enter a valid email address!
-        </div>
+        <div class="message-success"><strong>Great!</strong> Check your inbox and click the link to confirm your
+            subscription</div>
+        <div class="message-error">Enter a valid email, fool</div>
     </form>
-</section>
+{{else}}
+    <section class="subscribe-form">
+        <h3 class="subscribe-form-title">Get on the {{@site.title}}</h3>
+        <p class="subscribe-form-description">Get the latest personal growth article at 7:30AM, every Monday</p>
+
+
+        <form class="signup-form" data-members-form="signup">
+            <div class="signup-box">
+                <input data-members-email type="email" placeholder="your email..." required="true" autocomplete="false"
+                    autofocus />
+                <button class="button pop" type="submit">
+                    <span class="button-content">get the newsletter</span>
+                    <span class="button-loader">{{> "icons/loader"}}</span>
+                </button>
+            </div>
+
+            <div class="message-success"><strong>Great!</strong> Check your inbox and click the link to confirm your
+                subscription</div>
+            <div class="message-error">Enter a valid email, fool</div>
+        </form>
+    </section>
+{{/if}}
